@@ -135,56 +135,9 @@
         
     </script>
 
-    <script type="text/javascript">
-
-        var g_isPostBack = false;
-        function callAjax(webUrl, queryString) {
-            var xmlHttpObject = null;
-            try {
-                // Firefox, Opera 8.0+, Safari...
-                xmlHttpObject = new XMLHttpRequest();
-            }
-            catch (ex) {
-                // Internet Explorer...
-                try {
-                    xmlHttpObject = new ActiveXObject('Msxml2.XMLHTTP');
-                }
-                catch (ex) {
-                    xmlHttpObject = new ActiveXObject('Microsoft.XMLHTTP');
-                }
-            }
-            if (xmlHttpObject == null) {
-                window.alert('AJAX is not available in this browser');
-                return;
-            }
-            xmlHttpObject.open("GET", webUrl + queryString, false);
-            xmlHttpObject.send();
-            var valueSent = xmlHttpObject.responseText;
-            return valueSent;
-        }
-
-        function doUpdate() {
-            var webUrl = 'Result.aspx';
-            var queryString = '?Type=UpdateCount&MID=0';
-            var returnCode = callAjax(webUrl, queryString);
-        }
-
-        function windowOnUnload() {
-            //            if (g_isPostBack == true)
-            //                return;
-            if (confirm("You have attempted to leave this page.Are you sure you want to exit this page?")) {
-                //confirmExit();
-            }
-            //doUpdate();
-        }
-
-        window.onbeforeunload = windowOnUnload;
-
-    </script>
-
 </head>
 <body>
-    <form name="form1" method="post" action="result.aspx" id="form1">
+
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
