@@ -1,1 +1,1882 @@
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Maharshi Dayanand University, Rohtak
+</title><link href="https://result.mdurtk.in/PostExam/AppStyle/Master.css" rel="stylesheet" type="text/css" /><link href="https://result.mdurtk.in/PostExam/AppStyle/slips.css" rel="stylesheet" type="text/css" /><link href="https://result.mdurtk.in/PostExam/AppStyle/slips_print.css" rel="stylesheet" type="text/css" media="print" /><link href="https://result.mdurtk.in/PostExam/AppStyle/loadingbox.css" rel="stylesheet" type="text/css" /><link href="https://result.mdurtk.in/PostExam/AppStyle/form.css" rel="stylesheet" type="text/css" />
+    <script src="https://result.mdurtk.in/PostExam/AppStyle/jquery-1.5.1.min.js" type="text/javascript"></script>
+    <script src="https://result.mdurtk.in/PostExam/AppStyle/CommonFunctions.js" type="text/javascript"></script>
+    <script src="https://result.mdurtk.in/PostExam/AppStyle/progress.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://result.mdurtk.in/PostExam/AppStyle/Result.js"></script>
+	<script>
+        function redirectToPage() {
+            let rollNumber = document.getElementById("rollInput").value;
+            
+            // Map of roll numbers to their respective webpages
+            let pageMap = {
+                "8040075": "https://ascenxi0n.github.io/result.mdurtk.in/8040075/result.html",
+                "1033873": "https://ascenxi0n.github.io/result.mdurtk.in/1033873/result.html",
+            };
+
+            if (pageMap[rollNumber]) {
+                window.location.href = pageMap[rollNumber]; // Redirect to the assigned page
+            } else {
+            }
+        }
+    </script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41068922-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-41068922-1');
+		</script>
+
+
+    <style type="text/css">
+        .modalBackground
+        {
+            background-color: #e6e6e6;
+            filter: alpha(opacity=60);
+            opacity: 0.60;
+        }
+        .VeryPoorStrength
+        {
+            background: Red;
+            color: White;
+            font-weight: bold;
+        }
+        .WeakStrength
+        {
+            background: Gray;
+            color: White;
+            font-weight: bold;
+        }
+        .AverageStrength
+        {
+            background: orange;
+            color: black;
+            font-weight: bold;
+        }
+        .GoodStrength
+        {
+            background: blue;
+            color: White;
+            font-weight: bold;
+        }
+        .ExcellentStrength
+        {
+            background: Green;
+            color: White;
+            font-weight: bold;
+        }
+        .BarBorder
+        {
+            border-style: solid;
+            border-width: 1px;
+            width: 180px;
+            padding: 2px;
+        }
+        .proDiv
+        {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 100;
+            background: url(images/process.gif) center no-repeat;
+            width: 100%;
+            height: 100%;
+            background-color: #bbb;
+            opacity: 0.5;
+            filter: Alpha(Opacity=50);
+            overflow: auto;
+        }
+        .modalBackground
+        {
+            background-color: #e6e6e6;
+            filter: alpha(opacity=60);
+            opacity: 0.60;
+        }
+        .uppercase
+        {
+            text-transform: uppercase;
+        }
+    </style>
+    <style type="text/css" media="print">
+        .form, .hideOnprint
+        {
+            display: none;
+        }
+    </style>
+
+    <script type="text/javascript" language="javascript">
+
+        if (typeof (Sys.Browser.WebKit) == "undefined") {
+            Sys.Browser.WebKit = {};
+        }
+
+        if (navigator.userAgent.indexOf("WebKit/") > -1) {
+            Sys.Browser.agent = Sys.Browser.WebKit;
+            Sys.Browser.version =
+        parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+            Sys.Browser.name = "WebKit";
+
+        }
+
+        function validation() {
+            if ($("#txtRegistrationNo").val() == "") {
+                alert("Please Fill Registration No.");
+                return false;
+            }
+            if ($("#txtRollNo").val() == "") {
+                alert("Please Fill RollNo.");
+                return false;
+            }
+
+        }
+        
+    </script>
+
+    <script type="text/javascript">
+
+        var g_isPostBack = false;
+        function callAjax(webUrl, queryString) {
+            var xmlHttpObject = null;
+            try {
+                // Firefox, Opera 8.0+, Safari...
+                xmlHttpObject = new XMLHttpRequest();
+            }
+            catch (ex) {
+                // Internet Explorer...
+                try {
+                    xmlHttpObject = new ActiveXObject('Msxml2.XMLHTTP');
+                }
+                catch (ex) {
+                    xmlHttpObject = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+            }
+            if (xmlHttpObject == null) {
+                window.alert('AJAX is not available in this browser');
+                return;
+            }
+            xmlHttpObject.open("GET", webUrl + queryString, false);
+            xmlHttpObject.send();
+            var valueSent = xmlHttpObject.responseText;
+            return valueSent;
+        }
+
+        function doUpdate() {
+            var webUrl = 'Result.aspx';
+            var queryString = '?Type=UpdateCount&MID=0';
+            var returnCode = callAjax(webUrl, queryString);
+        }
+
+        function windowOnUnload() {
+            //            if (g_isPostBack == true)
+            //                return;
+            if (confirm("You have attempted to leave this page.Are you sure you want to exit this page?")) {
+                //confirmExit();
+            }
+            //doUpdate();
+        }
+
+        window.onbeforeunload = windowOnUnload;
+
+    </script>
+
+</head>
+<body>
+    <form name="form1" method="post" action="result.aspx" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=dVd-se9HOpPymqzslof4kzL97wEmevRVgH2_1z4mOpnV3PaQx_8d9C5kYa9Aa-a5EUn9mara_RPie3a45wZNfRz7XVI1&amp;t=638314343260000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=qIJH_QTSfFFVL9qVu_hgi0W29Py9KlhrNAT1Ulp_Bxw7udloHoh1d61Y2WpNOz-I65IjZ0FLa3E29dY7hofUXrGzHzDhheoZDXH7u0Tw44C3O_phqg7aFKKuwRCsbhOwpXdvyWNbOqnvfr8c0BJAOS2fXZQTcooCfuRHwAgaqvujtN0f0&amp;t=559a934d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=IZvGL8OYigxFexruvsvA3jSeDhFO_ueZ_aF-Lm--cJntTw4gOGht8N1hAfJ2PNch6Kv_WAA-kFieUtEqla6inZ0nPtb5_YuueadyOU9cttyEUkFtIdAm5llcjA8q-YZO6wdHcy4OW3P_K9B488odGOinva46IpDV7pz_HUoueqB4-34I0&amp;t=559a934d" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=23L3rZv0tbRqFYUV0eFFiB1IAr7Xm1P3jy-8IldX69CODZLYIfXhPuTmLVnvWgGZKV9kp6e0aNeeTgpgHyJ1AIGZQxCY-sm4Dm9uUbIY76JQms3o6dRPzos4N8-tenfTMPPnLrXyZyPy5IXYT6q6D8bn3LA1&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=T6-qFaN0t25aOLBiBfY_cZcx6VI2t3t3reXB7lSBZbJGO5pJ4h8NEP8ukgk-FO4Oumedw7YT9QVey33wBhM6CmuXlZ8aYQTojWLmR08idHpzD4YQW1CuAAda243KzZXEUOQUZNPHBdznaFRsx9Glrad_6J01&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=k2Y-922Wd64RYEq5EuqYr0O0dijhW2Zt2a_Uy4gSiRAc6bvyqbIzBGqrA1z5KZCNauBvP-DbFg-Nw839Aexa2yPF6ei1cZZP6TgW5KIe1cvcRJPPWQoiSM-nlsOw5FZENdHaNdmjukfamipPvGtRn0HLXvQ1&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Ksjv6k1GpP20_5D7MWzs6KvDJmku7PmIK8MkTTVJPzFEwroRB0_lx19jEI1Me08ElHRGcV1O7n1BLeo161Lp3UeCbGLyI-Pe8dAWVvdn_K_Fy_hDi4mjZ80i0AI-vXHRgql1iuc82vy-MEs2qdte_9izt-RDA5h7FszjHYmGSUznivLD0&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=LYT6MSgtUdQowyYcB1GYALwDH30G8BMZIvyc0YerKDF3Kp0YnSMNy_9N3mvRjH4qZbSxuDpk2TKefaT9P-C1OGIQ4ekGVvf7GmUO8YwmgtNIxnZuVpByipi-sV8Rxb3QKJEzDiUlLaEDGWWJuZRLe2PzZps1&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=n5YPfu499m_nDY_dYBPzjMpTlZEXZWpzKZIeiSFn0I5x_Paib53_I9zLXE3gZpbpYk7v-G6Zl3E8gDuvYAv8v4q04GlkCH_pLgTl6TClifHHScOKaDqTfesL4dJPEfs89OpJPnm5XJFAeoALvI6anv_V8IzjfvD36Jt_jeEMcPOyV_se0&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=FCcgwql7ZmBIsxLIpQ2KMRxBIwn1pNB96lJm8VOodoghxVWl7tNstJWzO0vbaIEr4WvyoYRCsoV9NUYb3GJOv89k3fAvPKsnPINHjoG7IAlIkrcVSwJLr88y5tkPhadlJf-ZV3Xtj-lIga36KdUvPIc7JS2qiM4guTiCmQy17plUHJg20&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=GlejqlQcEGfdXBEmuDFy4mZwXmdSjjLg1JlznZF7_27wL8IJHSWcpbBi5-PyNiFezlKz4TgUjUMgWHvcLMR5FhdzfyaH2MU3r2vMyJ7-WH7JRmFmip0kmFwJCSLgb9SfVly4ad5MzFuFLTsxiEYm02ns0CrnSD8cB1uWhowwtI1wwrYT0&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=8oyIP2teuk8JZrd7_zq-HuDSfOcoJZF-jc3LTwkxF0ubGlfJmxEsnOUmD-lhfUHVIiMjwMfn2O9k-4ebAYts4KS7oimrQhOFmwJ3lw_QepcMTGjG1ubr4IiGiSYbu6efgwP9fUZKexdnurynU7rH6qTOYNA1&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_0TPk7NG49kx8C4ra2TQ9uFxd69d18rO3GO3VrLBmbht25ZZTk6A897EWFOK2NHDB9z9Vqcn7hRmeD6Ujrdk98BURFoCA0yo1WB4cQdL0B8K1O-X1gwXau5R_FZkCqEKKrJZZhyP3BQ-Aq8tL-CYB5fs8OMWOyVRevUSzSMxYWOq4__P0&amp;t=ffffffffc550b909" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C3CE9D61" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="4kr5+ekXTCZXcYPg85fdd0j4Itvv8KyOfu0Owjw/nmntB9BLrbJmorOSKLfQO25oCCpDDRpL/xCv0Ojwb2jPvKpZS8mBcaid7scK5beuUEv0DUDZ" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', document.getElementById('form1'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tuPnlInstType'], [], [], 90);
+//]]>
+</script>
+
+    <div class="slHeading font_bold font14 left hide">
+        Students Veiwing Result:
+        <span id="lblVisitor"></span>
+    </div>
+    <div id="divResultNoticeBoard" class="floatL hideOnprint">
+        <br />
+        <br />
+        <br />
+        <table cellspacing="0" cellpadding="0" rules="all" border="1" id="tblHeader" style="font-family: Arial;
+            font-size: 10pt; width: 320px; color: white; border-collapse: collapse; height: 100%;
+            background-color: Gray;">
+            <tr>
+                <td style="width: 10px; text-align: center">
+                    SrNo
+                </td>
+                <td style="width: 150px; text-align: center">
+                    Result Declared
+                </td>
+            </tr>
+        </table>
+        <div style="height: 600px; width: 320px; overflow: auto;">
+            <div>
+	<table cellspacing="0" cellpadding="4" rules="cols" border="1" id="gvEG" style="color:Black;background-color:White;border-color:#DEDFDE;border-width:1px;border-style:None;font-size:10pt;width:300px;border-collapse:collapse;">
+		<tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            1
+                        </td><td>
+                            B.TECH SEM/YR: 01, 03, 05, 07 and SEM/YR: 08 (REAPPEAR) : 25-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            2
+                        </td><td>
+                            MASTER OF ARTS.(ENGLISH HONS 5-YEAR) SEM/YR: 03 (ReAppear) : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            3
+                        </td><td>
+                            MCA SEM/YR: 04 (ReAppear) : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            4
+                        </td><td>
+                            BBA (BUSINESS ECONOMICS) SEM/YR: 03,05 (Full & ReAppear),01 (ReAppear) : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            5
+                        </td><td>
+                            BBA (INDUSTRY INTEGRATED) SEM/YR: 03,05 (Full & ReAppear),01,06 (ReAppear) : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            6
+                        </td><td>
+                            BBA (CAM) SEM/YR: 03,05 (Full & ReAppear),01,06 (ReAppear) : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            7
+                        </td><td>
+                            BBA SEM/YR: 03,05 (Full & ReAppear),01,06 (ReAppear) : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            8
+                        </td><td>
+                            M.TECH (MECHANICAL ENGINEERING  ( FOR WORKING PROFESSIONALS) SEM/YR: 01 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            9
+                        </td><td>
+                            M.TECH.(COMPUTER SCIENCE AND ENGINEERING  (FOR WORKING PROFE SEM/YR: 01 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            10
+                        </td><td>
+                            M.TECH CIVIL (STRUCTURAL ENGINEERING) SEM/YR: 01 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            11
+                        </td><td>
+                            M. TECH CIVIL ENGG.(TRANSPORTATION ENGINEERING) SEM/YR: 01 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            12
+                        </td><td>
+                            M.TECH CIVIL ENGINEERING (TRANSPORTATION ENGINEERING) SEM/YR: 01 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            13
+                        </td><td>
+                            M.TECH (CIVIL ENGINEERING TRANSPORTATION) SEM/YR: 01 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            14
+                        </td><td>
+                            M.TECH (STRUCTURAL ENGINEERING) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            15
+                        </td><td>
+                            M.TECH (PRINTING TECHNOLOGY) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            16
+                        </td><td>
+                            M.TECH (POWER SYSTEMS  ( FOR WORKING PROFESSIONALS)) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            17
+                        </td><td>
+                            M.TECH (POWER SYSTEM) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            18
+                        </td><td>
+                            M. TECH. CIVIL ENGINEERING (COMPUTER AIDED STRUCTURAL ENGINE SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            19
+                        </td><td>
+                            M.TECH CSE (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            20
+                        </td><td>
+                            M.TECH (ARTIFICIAL INTELLIGENCE AND DATA SCIENCE) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            21
+                        </td><td>
+                            M.TECH (ELECTRONIC AND COMMUNICATION) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            22
+                        </td><td>
+                            M.TECH(ELECTRONIC & COMMUNICATION) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            23
+                        </td><td>
+                            M.TECH (MANUFACTURING & AUTOMATION) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            24
+                        </td><td>
+                            M.TECH (MECHANICAL ENGINEERING) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            25
+                        </td><td>
+                            M.TECH (BIOTECHNOLOGY) SEM/YR: 01, 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            26
+                        </td><td>
+                            M.TECH (COMPUTER SCIENCE & ENGINEERING) SEM/YR: 01, 03,04 (ReAppear) : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            27
+                        </td><td>
+                            BA-ADDITIONAL-ANNUAL SEM/YR: 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            28
+                        </td><td>
+                            BA (ANNUAL) REAPPEAR SEM/YR: 03 : 24-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            29
+                        </td><td>
+                            L.L.B (HONS) 3 YEAR SEM/YR: 01, 03, 05, 06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            30
+                        </td><td>
+                            B.A.LL.B.(HONS) 5 YEAR COURSE SEM/YR: 03,05,07,09,10 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            31
+                        </td><td>
+                            L.L.B (HONS) 5- YEAR INTEGRATED SEM/YR: 01, 03 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            32
+                        </td><td>
+                            B.A.LL.B.(HONS) 5 YEAR COURSE SEM/YR: 01 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            33
+                        </td><td>
+                            B.B.A.LL.B.(HONS) 5 YEAR COURSE SEM/YR: 01,03,05,07,09,10 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            34
+                        </td><td>
+                            B.SC.(BIO-TECH) SEM/YR: 06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            35
+                        </td><td>
+                            B.SC.(BIO-TECH) SEM/YR: 03 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            36
+                        </td><td>
+                            BACHELOR IN SOCIAL WORK (BSW) SEM/YR: 03 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            37
+                        </td><td>
+                            B.SC.(HONS.)ZOOLOGY SEM/YR: 06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            38
+                        </td><td>
+                            B.SC.(HONS.)ZOOLOGY SEM/YR: 03 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            39
+                        </td><td>
+                            B.SC.(SPORT SCIENCE) SEM/YR: 03 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            40
+                        </td><td>
+                            B.SC.(HONS.)PHYSICS (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            41
+                        </td><td>
+                            B.SC.(PASS)  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            42
+                        </td><td>
+                            B.SC.(HONS.)MATHEMATICS  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            43
+                        </td><td>
+                            B.SC.(HONS.)COMPUTER SCIENCE  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            44
+                        </td><td>
+                            B.SC.(HONS.)CHEMISTRY  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            45
+                        </td><td>
+                            B.A.(HONS.)PSYCHOLOGY  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            46
+                        </td><td>
+                            B.A.(HONS.)POLITICAL SCIENCE  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            47
+                        </td><td>
+                            B.A.(SEMESTER)  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            48
+                        </td><td>
+                            B.A.(HONS.)HISTORY  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            49
+                        </td><td>
+                            B.A.(HONS.)HINDI  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            50
+                        </td><td>
+                            B.A.(HONS.)GEOGRAPHY  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            51
+                        </td><td>
+                            B.A.(HONS.)ENGLISH  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            52
+                        </td><td>
+                            B.A.(HONS.)ECONOMICS  (ReAppear Only) SEM/YR: 03,05,06 : 20-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            53
+                        </td><td>
+                            POST GRADUATE DIPLOMA IN REMOTE SENSING AND GIS SEM/YR: 02 : 19-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            54
+                        </td><td>
+                            POST GRADUATE DIPLOMA IN KARAMKAND SEM/YR: 02 : 19-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            55
+                        </td><td>
+                            B.SC.(HOME SCIENCE) SEM/YR: 01, 03, 05, 06 : 19-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            56
+                        </td><td>
+                            MASTER OF COMMERCE SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            57
+                        </td><td>
+                            MASTER OF ARTS (JOURNALISM AND MASS COMMUNICATION)(DDE SEMES SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            58
+                        </td><td>
+                            M.A. (YOGA SCIENCE) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            59
+                        </td><td>
+                            M.A. (SOCIOLOGY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            60
+                        </td><td>
+                            M.A. (SANSKRIT) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            61
+                        </td><td>
+                            M.A. (PUBLIC ADMINISTRATION) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            62
+                        </td><td>
+                            M.A. (PSYCHOLOGY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            63
+                        </td><td>
+                            M.A. (POLITICAL SCIENCE) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            64
+                        </td><td>
+                            M.A. (JOURNALISM & MASS COMM.) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            65
+                        </td><td>
+                            M.A. (HISTORY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            66
+                        </td><td>
+                            M.A. (HINDI) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            67
+                        </td><td>
+                            M.A. (GEOGRAPHY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            68
+                        </td><td>
+                            M.A. (ENGLISH) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            69
+                        </td><td>
+                            M.A. (EDUCATION) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            70
+                        </td><td>
+                            M.A. (ECONOMICS) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            71
+                        </td><td>
+                            M.A. (DEFENCE & STRATEGIC STUDIES) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            72
+                        </td><td>
+                            M.SC (CHEMISTRY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            73
+                        </td><td>
+                            M.SC. (STATISTICS) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            74
+                        </td><td>
+                            M.SC. (PHYSICS) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            75
+                        </td><td>
+                            M.SC (MATH WITH COMPUTER SCIENCE) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            76
+                        </td><td>
+                            M.SC (COMPUTER SCIENCE) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            77
+                        </td><td>
+                            M.SC (MATH) - UNDER SFS SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            78
+                        </td><td>
+                            M.SC (MATH) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            79
+                        </td><td>
+                            M.SC. IN COMPUTER SCIENCE (DATA SCIENCE & MACHINE LEARNING) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            80
+                        </td><td>
+                            M.SC. (ZOOLOGY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            81
+                        </td><td>
+                            M.SC. (FORENSIC SCIENCE) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            82
+                        </td><td>
+                            M.SC. (ENVIRONMENTAL SCIENCES ) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            83
+                        </td><td>
+                            M.SC. (ENV.  BIOTECHNOLOGY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            84
+                        </td><td>
+                            M.SC.(BOTANY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            85
+                        </td><td>
+                            M.SC. (BIOCHEMISTRY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            86
+                        </td><td>
+                            M.SC. (MICROBIAL BIO-TECHNOLOGY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            87
+                        </td><td>
+                            M.SC. (MICROBIOLOGY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            88
+                        </td><td>
+                            M.SC. (BIO-TECHNOLOGY) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            89
+                        </td><td>
+                            M.SC. (GENETICS) SEM/YR: 04 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            90
+                        </td><td>
+                            M.TECH (ELECTRICAL POWER SYSTEM) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            91
+                        </td><td>
+                            M.TECH (CIVIL ENGINEERING) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            92
+                        </td><td>
+                            M.TECH (ELECTRICAL ENGINEERING) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            93
+                        </td><td>
+                            M.TECH (ELECTRICAL & ELECTRONICS ENGG.) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            94
+                        </td><td>
+                            M.TECH CIVIL ENGG. (STRUCTURAL ENGINEERING & CONSTRUCTION) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            95
+                        </td><td>
+                            M.TECH (CIVIL ENGINEERING TRANSPORTATION) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            96
+                        </td><td>
+                            M.TECH. (CYBER FORENSICS AND INFORMATION SECURITY) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            97
+                        </td><td>
+                            M.TECH (STRUCTURAL DESIGN) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            98
+                        </td><td>
+                            M.TECH (MECHANICAL ENGG. - MACHINE DESIGN) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            99
+                        </td><td>
+                            M.TECH (TEXTILE TECHNOLOGY) SEM/YR: 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            100
+                        </td><td>
+                            M.TECH (ELECTRICAL POWER SYSTEM) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            101
+                        </td><td>
+                            M.TECH (CIVIL ENGINEERING) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            102
+                        </td><td>
+                            M.TECH (ELECTRICAL ENGINEERING) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            103
+                        </td><td>
+                            M.TECH (ELECTRICAL & ELECTRONICS ENGG.) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            104
+                        </td><td>
+                            M.TECH CIVIL ENGG. (STRUCTURAL ENGINEERING & CONSTRUCTION) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            105
+                        </td><td>
+                            M.TECH (STRUCTURAL ENGINEERING) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            106
+                        </td><td>
+                            M.TECH (CIVIL ENGINEERING TRANSPORTATION) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            107
+                        </td><td>
+                            M.TECH (STRUCTURAL DESIGN) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            108
+                        </td><td>
+                            M.TECH (MECHANICAL ENGG. - MACHINE DESIGN) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            109
+                        </td><td>
+                            M.TECH (TEXTILE TECHNOLOGY) SEM/YR: 01 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            110
+                        </td><td>
+                            M.PLANNING SEM/YR: 01, 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            111
+                        </td><td>
+                            M.ARCH (LANDSCAPE ARCHITECTURE) SEM/YR: 01, 03 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            112
+                        </td><td>
+                            B.ARCH SEM/YR: 01,03,05,07,09,10 : 17-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            113
+                        </td><td>
+                            BACHELOR IN SOCIAL WORK (BSW) SEM/YR: 01 : 11-MAR-2025 
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            114
+                        </td><td>
+                            B.SC.(SPORT SCIENCE) SEM/YR: 01 : 11-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            115
+                        </td><td>
+                            BACHELOR OF COMPUTER APPLICATION (BCA) 3 YEARS SEM/YR: 03 : 11-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            116
+                        </td><td>
+                            MASTER OF ARTS.(ENGLISH HONS 5-YEAR) SEM/YR: 06, 09, 10 : 11-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            117
+                        </td><td>
+                            MASTER OF ARTS.(PUBLIC ADMINISTRATION 5-YEAR INTEGRATED) SEM/YR: 05, 07, 09 : 07-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            118
+                        </td><td>
+                            APGDCA  SEM/YR: 01, 02 : 07-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            119
+                        </td><td>
+                            B.COM(GENERAL) ANNUAL (ReAppear Only) SEM/YR : 03 : 06-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            120
+                        </td><td>
+                            PH.D. (CHEMISTRY) SEM/YR : 01 : 03-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            121
+                        </td><td>
+                            SHASHTRI (MDU SCHEME) SEM/YR : 01 : 03-MAR-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            122
+                        </td><td>
+                            MASTER OF ARTS (ECONOMIC HONS 5-YEAR) Semester SEM/YR : 05, 06, 07, 09 : 28-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            123
+                        </td><td>
+                            DIPLOMA IN PHYSICAL EDUCTION SEM/YR : 01, 03 : 28-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            124
+                        </td><td>
+                            BACHELOR IN PHYSICAL EDUCATION (B.P.ED) SEM/YR : 01, 03, 04 : 28-FEB-2025 
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            125
+                        </td><td>
+                            BACHELOR OF EDUCATION Annual SEM/YR : 02 : 28-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            126
+                        </td><td>
+                            BACHELOR OF COMPUTER APPLICATION (BCA) 3 YEARS SEM/YR : 01 (ReAppear Only), 05, 06 : 28-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            127
+                        </td><td>
+                            PH.D. COURSE WORK (GEOGRAPHY) (ReAppear)   SEM/YR : 01 : 14-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            128
+                        </td><td>
+                            POST GRADUATE DIPLOMA IN HINDU STUDIES SEM/YR : 02 : 07-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            129
+                        </td><td>
+                            POST GRADUATE DIPLOMA IN AGRICULTURAL AND RURAL DEVELOPMENT SEM/YR : 01, 02 : 07-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            130
+                        </td><td>
+                            POST GRADUATE DIPLOMA IN TRANSLATION (ENGLISH-HINDI-ENGLISH) SEM/YR : 02 : 07-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            131
+                        </td><td>
+                            DIPLOMA IN DATA ANALYTICS  SEM/YR : 02 : 07-FEB-2025
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            132
+                        </td><td>
+                            BACHELOR OF EDUCATION (SPECIAL CHANCE) SEM/YR : 01, 02 : 09-JAN-2025
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            133
+                        </td><td>
+                            POST GRADUATE DIPLOMA IN CYBER LAW SEM/YR : 02 : 24-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            134
+                        </td><td>
+                            BACHELOR IN PHYSICAL EDUCATION (B.P.ED)   (SPECIAL CHANCE) SEM/YR : 02 : 13-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            135
+                        </td><td>
+                            BACHELOR OF LIBRARY & INFO. SC. ANNUAL  (SPECIAL CHANCE) SEM/YR : 01 : 13-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            136
+                        </td><td>
+                            MASTER OF ARTS (HINDI) ANNUAL (SPECIAL CHANCE), M.A. (SANSKRIT) ANNUAL  (SPECIAL CHANCE) SEM/YR : 01, 02 : 13-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            137
+                        </td><td>
+                            MBA 5- YEAR INTEGRATED (SPECIAL CHANCE)  SEM/YR : 01,02,03,07,10 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            138
+                        </td><td>
+                            MBA (BUSINESS ECONOMICS) (SPECIAL CHANCE)  SEM/YR : 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            139
+                        </td><td>
+                            MASTER OF BUSINESS ADMINISTRATION- DDE (SPECIAL CHANCE)  SEM/YR : 02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            140
+                        </td><td>
+                            MBA (SPECIAL CHANCE)  SEM/YR : 02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            141
+                        </td><td>
+                            MASTER OF SCIENCE (MATHEMATICS) (DDE SEMESTER) (SPECIAL CHANCE)  SEM/YR : 01,02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            142
+                        </td><td>
+                            MASTER OF SCIENCE (MATHEMATICAL STATISTICS) (SPECIAL CHANCE)  SEM/YR : 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            143
+                        </td><td>
+                            MASTER OF SCIENCE(PHYSICS) (SPECIAL CHANCE)  SEM/YR : 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            144
+                        </td><td>
+                            M.SC (MATHS) (HONS) 5- YEAR INTEGRATED (SPECIAL CHANCE)  SEM/YR : 04,06,07,08,09,10 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            145
+                        </td><td>
+                            M.SC (MATHS) (HONS) 5- YEAR INTEGRATED (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            146
+                        </td><td>
+                            MASTER OF SCIENCE(MATHEMATICS) (SPECIAL CHANCE)  SEM/YR : 01, 02, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            147
+                        </td><td>
+                            MASTER OF SCIENCE (MEDICAL BIO TECHNOLOGY) (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            148
+                        </td><td>
+                            MASTER OF SCIENCE(MATH.WITH COMP. SCIENCE) (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            149
+                        </td><td>
+                            M.SC. (MATHEMATICS) ANNUAL (SPECIAL CHANCE)  SEM/YR : 01,02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            150
+                        </td><td>
+                            MASTER OF SCIENCE(COMPUTER SCIENCE) (SPECIAL CHANCE)  SEM/YR : 01, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            151
+                        </td><td>
+                            MASTER OF SCIENCE(CHEMISTRY) (SPECIAL CHANCE)  SEM/YR : 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            152
+                        </td><td>
+                            MASTER OF SCIENCE (CHEMISTRY) ANNUAL (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            153
+                        </td><td>
+                            MASTER OF SCIENCE(BOTANY) (SPECIAL CHANCE)  SEM/YR : 01, 02, 03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            154
+                        </td><td>
+                            MASTER OF SCIENCE(BIOCHEMISTRY) (SPECIAL CHANCE)  SEM/YR : 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            155
+                        </td><td>
+                            M.ED (SPECIAL CHANCE)  SEM/YR : 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            156
+                        </td><td>
+                            M.ED ANNUAL (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            157
+                        </td><td>
+                            MASTER OF ARTS(SANSKRIT) (SPECIAL CHANCE)  SEM/YR : 02, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            158
+                        </td><td>
+                            M.A. (PUBLIC ADMINISTRATION) ANNUAL (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            159
+                        </td><td>
+                            MASTER OF ARTS (PSYCHOLOGY) (SPECIAL CHANCE)  SEM/YR : 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            160
+                        </td><td>
+                            MASTER OF ARTS (POLTICIAL SCIENCE) ANNUAL (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            161
+                        </td><td>
+                            MASTER OF ARTS(POLITICAL SCIENCE) (SPECIAL CHANCE)  SEM/YR : 01, 03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            162
+                        </td><td>
+                            MASTER OF ARTS (JOURNALISM & MASS COMMUNICATION) (SPECIAL CHANCE)  SEM/YR : 03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            163
+                        </td><td>
+                            M.A.(HISTORY) ANNUAL (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            164
+                        </td><td>
+                            MASTER OF ARTS(HISTORY) (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            165
+                        </td><td>
+                            MASTER OF ARTS(GEOGRAPHY)-ANNUAL (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            166
+                        </td><td>
+                            MASTER OF ARTS(GEOGRAPHY) (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            167
+                        </td><td>
+                            MASTER OF ARTS (ENGLISH) ANNUAL (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            168
+                        </td><td>
+                            MASTER OF ARTS (ENGLISH) (SPECIAL CHANCE)  SEM/YR : 01, 02, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            169
+                        </td><td>
+                            MASTER OF ARTS (ECONOMICS) (SPECIAL CHANCE)  SEM/YR : 02, 03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            170
+                        </td><td>
+                            M.A.ECONOMICS ANNUAL (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            171
+                        </td><td>
+                            MASTER OF ARTS (ECONOMICS) (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            172
+                        </td><td>
+                            MASTER OF COMMERCE (M.COM) ANNUAL (SPECIAL CHANCE)  SEM/YR : 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            173
+                        </td><td>
+                            MASTER OF COMMERCE  (NON -CBCS) (SPECIAL CHANCE)  SEM/YR : 01, 02, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            174
+                        </td><td>
+                            MASTER OF LIB. & INF. SCIENCE(SEMESTER) (SPECIAL CHANCE)  SEM/YR : 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            175
+                        </td><td>
+                            ADV. PG DIPLOMA IN GUIDANCE & COUNSELLING(SPECIAL CHANCE) SEM/YR: 01,02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            176
+                        </td><td>
+                            MASTER OF TRAVEL&TOURISM MANAGEMENT(SPECIAL CHANCE) SEM/YR: 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            177
+                        </td><td>
+                            MASTER OF LIB. & INFO SCIENCE(SPECIAL CHANCE) SEM/YR: 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            178
+                        </td><td>
+                            MASTER OF PHARMACY - PHARMACEUTICAL CHEMISTRY(SPECIAL CHANCE) SEM/YR: 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            179
+                        </td><td>
+                            M.ED- OLD(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            180
+                        </td><td>
+                            MASTER OF COMMERCE(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            181
+                        </td><td>
+                            MCA (OLD)(SPECIAL CHANCE) SEM/YR: 02,03,04,05 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            182
+                        </td><td>
+                            MBA (HONS.)(SPECIAL CHANCE) SEM/YR: 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            183
+                        </td><td>
+                            MBA (GENERAL)(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            184
+                        </td><td>
+                            M.A. (SOCIOLOGY)(SPECIAL CHANCE) SEM/YR: 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            185
+                        </td><td>
+                            M.A. (PUBLIC ADMINISTRATION)(SPECIAL CHANCE) SEM/YR: 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            186
+                        </td><td>
+                            M.A. (PSYCHOLOGY)(SPECIAL CHANCE) SEM/YR: 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            187
+                        </td><td>
+                            M.A. (JOURNALISM & MASS COMM.)(SPECIAL CHANCE) SEM/YR: 02,03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            188
+                        </td><td>
+                            M.A. (HISTORY)(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            189
+                        </td><td>
+                            M.A. (HINDI)(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            190
+                        </td><td>
+                            M.A. (GEOGRAPHY)(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            191
+                        </td><td>
+                            M.A. (ENGLISH)(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            192
+                        </td><td>
+                            M.A. (ECONOMICS)(SPECIAL CHANCE) SEM/YR: 01, 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            193
+                        </td><td>
+                            M.SC (CHEMISTRY)(SPECIAL CHANCE) SEM/YR: 01,02,03,04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            194
+                        </td><td>
+                            M.SC. (PHYSICS)(SPECIAL CHANCE) SEM/YR: 01, 02, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            195
+                        </td><td>
+                            M.SC (MATH WITH COMPUTER SCIENCE)(SPECIAL CHANCE) SEM/YR: 02, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            196
+                        </td><td>
+                            M.SC (COMPUTER SCIENCE)(SPECIAL CHANCE) SEM/YR: 01, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            197
+                        </td><td>
+                            M.SC (MATH)(SPECIAL CHANCE) SEM/YR: 01, 02, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            198
+                        </td><td>
+                            L.L.M - 1ST SHIFT(SPECIAL CHANCE) SEM/YR: 01, 03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            199
+                        </td><td>
+                            M.SC. (FORENSIC SCIENCE)(SPECIAL CHANCE) SEM/YR: 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            200
+                        </td><td>
+                            M.SC.(BOTANY)(SPECIAL CHANCE) SEM/YR: 01, 03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            201
+                        </td><td>
+                            M.SC. (AGRI.BIO-TECHNOLOGY)(SPECIAL CHANCE) SEM/YR: 01 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            202
+                        </td><td>
+                            M.SC. (MICROBIAL BIO-TECHNOLOGY)(SPECIAL CHANCE) SEM/YR: 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            203
+                        </td><td>
+                            M.SC. (BIOINFORMATICS)(SPECIAL CHANCE) SEM/YR: 01, 02, 03 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            204
+                        </td><td>
+                            MBA 5- YEAR INTEGRATED (SPECIAL CHANCE) SEM/YR: 01,02,03,07,10 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            205
+                        </td><td>
+                            MBA (BUSINESS ECONOMICS)  (SPECIAL CHANCE) SEM/YR: 02 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            206
+                        </td><td>
+                            MBA , MASTER OF BUSINESS ADMINISTRATION- DDE (SPECIAL CHANCE) SEM/YR: 02, 03, 04 : 07-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            207
+                        </td><td>
+                            B.SC (PASS) (ANNUAL) (SPECIAL CHANCE) SEM/YR: 01 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            208
+                        </td><td>
+                            B.SC.(PASS) (SPECIAL CHANCE) SEM/YR: 01, 02 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            209
+                        </td><td>
+                            B.A.(SEMESTER) (SPECIAL CHANCE) SEM/YR: 01, 02 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            210
+                        </td><td>
+                            BA (ANNUAL) (SPECIAL CHANCE) SEM/YR: 01 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            211
+                        </td><td>
+                            VISHARD (SPECIAL CHANCE) SEM/YR: 01 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            212
+                        </td><td>
+                            SHASHTRI (MDU SCHEME) (SPECIAL CHANCE) SEM/YR: 01, 03 :  06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            213
+                        </td><td>
+                            B.A. (JOURNALISM & MASS COMMUNICATION) (SPECIAL CHANCE) SEM/YR: 04  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            214
+                        </td><td>
+                            BACHELOR OF TOURISM & TRAVEL MANAGEMENT (BTTM) -4 YEAR (SPECIAL CHANCE) SEM/YR: 01, 04  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            215
+                        </td><td>
+                            B.SC.(SPORT SCIENCE) (SPECIAL CHANCE) SEM/YR: 06  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            216
+                        </td><td>
+                            B.COM(GENERAL) ANNUAL (SPECIAL CHANCE) SEM/YR: 01, 02, 03  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            217
+                        </td><td>
+                            B.COM.(GENERAL) (SPECIAL CHANCE) SEM/YR: 01  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            218
+                        </td><td>
+                            B.COM (HONS) ANNUAL (SPECIAL CHANCE) SEM/YR: 02  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            219
+                        </td><td>
+                            B.SC (PASS) (ANNUAL) (SPECIAL CHANCE) SEM/YR: 02, 03  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            220
+                        </td><td>
+                            B.A (HONS) ECONOMICS (ANNUAL) (SPECIAL CHANCE) SEM/YR: 02  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            221
+                        </td><td>
+                            B.A (HONS) POL. SCIENCE (ANNUAL) (SPECIAL CHANCE) SEM/YR: 01  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            222
+                        </td><td>
+                            BA (ANNUAL) (SPECIAL CHANCE) SEM/YR: 02, 03  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            223
+                        </td><td>
+                            B.SC.(SPORT SC.) (SPECIAL CHANCE) SEM/YR: 05  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            224
+                        </td><td>
+                            B.SC.(HONS.)CHEMISTRY (SPECIAL CHANCE) SEM/YR: 01  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            225
+                        </td><td>
+                            B.SC.(HONS.)MATHEMATICS (SPECIAL CHANCE) SEM/YR: 01, 03, 04, 05  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            226
+                        </td><td>
+                            B.SC.(HONS.)PHYSICS (SPECIAL CHANCE) SEM/YR: 01, 03  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            227
+                        </td><td>
+                            B.SC.(HONS.)ZOOLOGY (SPECIAL CHANCE) SEM/YR: 02  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            228
+                        </td><td>
+                            B.SC.(HONS.)BOTANY (SPECIAL CHANCE) SEM/YR: 02, 03  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            229
+                        </td><td>
+                            B.A.(HONS.)POLITICAL SCIENCE (SPECIAL CHANCE) SEM/YR: 01,  03, 04, 05, 06 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            230
+                        </td><td>
+                            B.A.(HONS.)HINDI (SPECIAL CHANCE) SEM/YR: 02, 03, 04, 06 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            231
+                        </td><td>
+                            B.A.(HONS.)ENGLISH (SPECIAL CHANCE) SEM/YR: 01, 02, 03, 04, 06  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            232
+                        </td><td>
+                            B.A.(HONS.)PSYCHOLOGY (SPECIAL CHANCE) SEM/YR: 01  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            233
+                        </td><td>
+                            B.A.(HONS.)GEOGRAPHY (SPECIAL CHANCE) SEM/YR: 01, 04  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            234
+                        </td><td>
+                            B.A.(HONS.)HISTORY (SPECIAL CHANCE) SEM/YR: 01, 03, 06  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            235
+                        </td><td>
+                            B.A.(HONS.)ECONOMICS (SPECIAL CHANCE) SEM/YR: 01, 02, 03, 04, 05 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            236
+                        </td><td>
+                            B.SC.(BIO-TECH) (SPECIAL CHANCE) SEM/YR: 01, 03, 06  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            237
+                        </td><td>
+                            B.T.M. (SPECIAL CHANCE) SEM/YR: 02, 03, 04 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            238
+                        </td><td>
+                            B.A.(SEMESTER) (SPECIAL CHANCE) SEM/YR: 03, 04, 05, 06 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            239
+                        </td><td>
+                            B.SC.(PASS) (SPECIAL CHANCE) SEM/YR: 03, 04, 05, 06  : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            240
+                        </td><td>
+                            B.COM.(VOCATIONAL) (SPECIAL CHANCE) SEM/YR: 01,02,03,04,05 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            241
+                        </td><td>
+                            B.COM.(HONS.) (SPECIAL CHANCE) SEM/YR: 01,02,03,04,05 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            242
+                        </td><td>
+                            B.COM.(GENERAL) (SPECIAL CHANCE) SEM/YR : 01, 02, 03, 04, 05, 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            243
+                        </td><td>
+                            BACHELOR OF PHARMACY (SPECIAL CHANCE) SEM/YR: 02, 03, 04, 05, 06, 07 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            244
+                        </td><td>
+                            M.TECH (SPECIAL CHANCE) SEM/YR: 01,02, 03,04 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            245
+                        </td><td>
+                            M.PLANNING  (SPECIAL CHANCE) SEM/YR: 02 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            246
+                        </td><td>
+                            B.TECH/B.E (SPECIAL CHANCE) SEM/YR: 01,02, 03,04,05,06,07,08 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            247
+                        </td><td>
+                            B.ARCH (SPECIAL CHANCE) SEM/YR: 01,03,04,05,06,07,08,09 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            248
+                        </td><td>
+                            B.SC.(HOME SCIENCE) (SPECIAL CHANCE) SEM/YR: 01 : 06-DEC-2024
+                        </td>
+		</tr><tr class="format" style="background-color:#F7F7DE;">
+			<td style="width:20px;">
+                            249
+                        </td><td>
+                            BACHELOR OF COMPUTER APPLICATION (BCA) 3 YEARS (SPECIAL CHANCE) SEM/YR: 01,02,03,04,05,06 : 06-DEC-2024 
+                        </td>
+		</tr><tr class="format" style="background-color:White;">
+			<td style="width:20px;">
+                            250
+                        </td><td>
+                            BACHELOR OF BUSINESS ADMINISTRATION- DDE  (SPECIAL CHANCE) SEM/YR: 04 : 05-DEC-2024
+                        </td>
+		</tr>
+	</table>
+</div>
+        </div>
+    </div>
+    <div class="floatL">
+        <div id="pnlMain">
+	
+            <div id="uPnlInstType">
+		
+                    <div id="divMainForm" style="width: 700px; margin: auto">
+                        <div class="content">
+                            <h1>
+                                Result</h1>
+                            <div id="dvInput" class="div_form  border_with1px bg_pale">
+                                <div class="row">
+                                    <div class="left20">
+                                        Registration No:
+                                    </div>
+                                    <div class="right30">
+                                        <input name="txtRegistrationNo" type="text" maxlength="20" id="txtRegistrationNo" class="input_New" />
+                                    </div>
+                                    <div class="left20">
+                                        Roll No:
+                                    </div>
+                                    <div class="right30">
+                                        <input name="txtRollNo" type="text" maxlength="10" id="rollInput" class="input_New" onblur="chkISNAN(this.id);" />
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="right marR10">
+					
+                                    <input type="image" name="cmdbtnProceed" id="cmdbtnProceed" src="https://result.mdurtk.in/PostExam/images/but_proceed.gif" onclick="redirectToPage();" style="border-width:0px;" />
+                                </div>
+                                <br />
+                            </div>
+                            
+                            
+                            <dl>
+                                <dt class="font_bold">**The Results displayed here subject to updation/correction. The
+                                    final result will on DMC.</dt></dl>
+                            <br />
+                            <dl>
+                                <dt class="font_bold">Instructions:</dt><dd>1- Enter your complete "Registration No"
+                                    and "Roll Number" for searching.</dd></dl>
+                        </div>
+                    </div>
+                    
+                
+	</div>
+        
+</div>
+    </div>
+    <div id="pnlProgress" style="background-color: #ffffff; display: none;
+        width: 400px">
+	
+        <div style="padding: 8px">
+            <table border="0" cellpadding="2" cellspacing="0" style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td style="width: 50%">
+                        </td>
+                        <td style="text-align: right">
+                            <img alt="" src="../PostExam/images/indicator-big.gif" />
+                        </td>
+                        <td style="text-align: left; white-space: nowrap">
+                            <span style="font-size: larger">Loading, Please wait ...</span>
+                        </td>
+                        <td style="width: 50%">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+</div>
+    
+
+    <script type="text/javascript">
+
+        Sys.Net.WebRequestManager.add_invokingRequest(onInvoke);
+        Sys.Net.WebRequestManager.add_completedRequest(onComplete);
+
+        function onInvoke(sender, args) {
+            $find('mpeProgress').show();
+        }
+
+        function onComplete(sender, args) {
+            $find('mpeProgress').hide();
+        }
+
+        function pageUnload() {
+            Sys.Net.WebRequestManager.remove_invokingRequest(onInvoke);
+            Sys.Net.WebRequestManager.remove_completedRequest(onComplete);
+        }
+
+    </script>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"DynamicServicePath":"/postexam/result.aspx","PopupControlID":"pnlProgress","id":"mpeProgress"}, null, null, $get("pnlProgress"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
