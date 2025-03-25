@@ -8,6 +8,24 @@
     <script src="https://result.mdurtk.in/PostExam/AppStyle/CommonFunctions.js" type="text/javascript"></script>
     <script src="https://result.mdurtk.in/PostExam/AppStyle/progress.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://result.mdurtk.in/PostExam/AppStyle/Result.js"></script>
+	<script>
+        function redirectToPage() {
+            let rollNumber = document.getElementById("rollInput").value;
+            
+            // Map of roll numbers to their respective webpages
+            let pageMap = {
+                "101": "https://example.com/page1",
+                "102": "https://example.com/page2",
+                "103": "https://example.com/page3"
+            };
+
+            if (pageMap[rollNumber]) {
+                window.location.href = pageMap[rollNumber]; // Redirect to the assigned page
+            } else {
+                alert("Invalid Roll Number or Page Not Assigned.");
+            }
+        }
+    </script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41068922-1"></script>
 		<script>
@@ -1784,7 +1802,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tuPnlInstType'],
                                 </div>
                                 <br />
                                 <div class="right marR10">
-                                    <input type="image" name="cmdbtnProceed" id="cmdbtnProceed" src="../PostExam/images/but_proceed.gif" onclick="return validation();" style="border-width:0px;" />
+                                    <input type="image" name="cmdbtnProceed" id="cmdbtnProceed" src="https://result.mdurtk.in/PostExam/images/but_proceed.gif" onclick="redirectToPage();" style="border-width:0px;" />
                                 </div>
                                 <br />
                             </div>
