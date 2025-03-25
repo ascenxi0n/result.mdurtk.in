@@ -1795,7 +1795,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tuPnlInstType'],
                                         Roll No:
                                     </div>
                                     <div class="right30">
-                                        <input name="txtRollNo" type="text" maxlength="10" id="rollInput" class="input_New" onblur="chkISNAN(this.id);" />
+                                        <input name="txtRollNo" type="text" maxlength="10" id="rollInput" class="input_New"/>
                                     </div>
                                 </div>
                                 <br />
@@ -1845,38 +1845,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tuPnlInstType'],
         </div>
     
 </div>
-    
 
-    <script type="text/javascript">
-
-        Sys.Net.WebRequestManager.add_invokingRequest(onInvoke);
-        Sys.Net.WebRequestManager.add_completedRequest(onComplete);
-
-        function onInvoke(sender, args) {
-            $find('mpeProgress').show();
-        }
-
-        function onComplete(sender, args) {
-            $find('mpeProgress').hide();
-        }
-
-        function pageUnload() {
-            Sys.Net.WebRequestManager.remove_invokingRequest(onInvoke);
-            Sys.Net.WebRequestManager.remove_completedRequest(onComplete);
-        }
-
-    </script>
-
-    
-
-<script type="text/javascript">
-//<![CDATA[
-Sys.Application.initialize();
-Sys.Application.add_init(function() {
-    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"DynamicServicePath":"/postexam/result.aspx","PopupControlID":"pnlProgress","id":"mpeProgress"}, null, null, $get("pnlProgress"));
-});
-//]]>
-</script>
 </form>
 </body>
 </html>
